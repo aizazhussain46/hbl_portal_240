@@ -1,0 +1,119 @@
+@import'./partials/variables.scss';
+@import'bootstrap.scss';
+@import'./partials/mixin.scss';
+@import'./partials/fonts.scss';
+@import'./partials/bootstrap-datepicker';
+@import'./partials/typography.scss';
+@import'./partials/login.scss';
+@import'./partials/footer.scss';
+@import'./partials/select-box';
+@import'./partials/utility.scss';
+@import'./partials/btn.scss';
+@import'./partials/navs.scss';
+@import'./partials/table-grid.scss';
+@import'./partials/account-statement';
+.popover-header {
+    padding: 8px 14px;
+    background-color: #00a997;
+    border-bottom: 1px solid #ebebeb;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.popover-title {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.example-popovers {
+    padding: 30px 0;
+    background: #000;
+}
+
+.acenter {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.popover-content {
+    color: #000;
+    font-size: 10px;
+    padding: 0;
+    p {
+        margin: 0 !important;
+        padding: 12px !important;
+    }
+    .media-body {
+        background-color: #fff6c5;
+    }
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}
+
+.m-l-r-20 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav.nav-tabs {
+    li {
+        a {
+            background-color: #fff;
+            border-color: #00a997;
+            color: #00a997;
+        }
+        &.active,
+        &:hover {
+            a {
+                background-color: #00a997;
+                border-color: #00a997;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.nano {
+    margin-top: 27px;
+}
+
+.profile-page {
+    .table {
+        border-width: 0;
+        tbody {
+            tr {
+                &:last-child {
+                    td {
+                        &:first-child {
+                            border-bottom-width: 0;
+                        }
+                        &:last-child {
+                            border-bottom-width: 0;
+                        }
+                    }
+                }
+                td {
+                    &:first-child {
+                        border-left-width: 0;
+                        border-top-width: 0;
+                    }
+                    &:last-child {
+                        border-right-width: 0;
+                        border-top-width: 0;
+                    }
+                }
+                td {
+                    font-size: 14px;
+                    @media only screen and (max-width: 600px) {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

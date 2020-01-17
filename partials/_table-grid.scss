@@ -1,0 +1,67 @@
+.table-box{
+  margin-bottom:10px; 
+}
+table.table{
+
+    &.table-grid{
+       
+       padding: 0;margin: 0; 
+       &.fund-wise-table{
+           td:first-child{
+               color: $base-color;
+               font-weight: 700;
+           }
+           tfoot{
+               td:first-child{
+                   color: $white;
+               }
+               td:last-child{
+                   font-size: 17px;
+                   font-weight: 700;
+               }
+           }
+       }
+     td,th{
+         border-bottom-width: 0;
+         border-top-width: 0;
+         padding:6px 6px;
+         @include rem(font-size,12);
+         font-weight:400;
+         
+         &:last-child{
+             text-align: right;
+         }
+     }
+      thead{
+          background-color: $base-gray;
+          color: $white;
+      }
+      tfoot{
+          td{
+              background-color:$base-gray;
+              color: $white;
+              small{
+                  display: block;
+              }
+          }
+         
+      }
+       caption{
+            background-color:$base-color;
+            text-align: center;
+            color: $white;
+            padding: 0;
+            margin: 0;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            @include rem(font-size,22);
+        }
+        }
+}
+
+
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color:$gray-2;
+}
+

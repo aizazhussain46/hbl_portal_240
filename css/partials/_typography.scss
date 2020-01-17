@@ -1,0 +1,130 @@
+.fz-14{
+    font-size: 14px;
+}
+.fz-13{
+    font-size: 13px;
+}
+.fz-17{
+    font-size: 17px;
+}
+.fz-18{
+    font-size: 18px;
+    @media screen and (max-width: 1366px) and (min-width:1024px){ 
+        font-size: 14px;
+    }
+}
+.fz-19{
+    font-size: 19px;
+}
+.fz-20{
+    font-size: 20px;
+}
+.fz-22{
+    font-size: 22px;
+}
+.fz-24{
+    font-size: 24px;
+}
+.fz-30{
+    font-size: 30px;
+}
+.fz-32{
+    font-size: 32px;
+}
+.fz-36{
+    font-size: 36px;
+}
+
+.fw-bold{
+    font-weight: 700;
+}
+.fw-ex-bold{
+    font-weight: 800;
+}
+
+.ls-1{
+    letter-spacing: 1px;
+}
+.ls-2{
+    letter-spacing: 2px;
+}
+.ls-3{
+    letter-spacing: 3px;
+}
+
+.page-title{
+    background: url("/images/title-bg.jpg") repeat-x;
+    padding-top: 24px;
+    padding-bottom: 33px;
+    text-transform: uppercase;
+    color:$base-gray;
+   
+    .h1{
+        margin: 0;
+        padding: 0;
+        display: table;
+        @media only screen and (min-width: 320px) and (max-width: 800px) {
+            @include rem(font-size,32);
+        }
+    }
+    i.icon{
+        color: $green;
+        display: table-cell;
+        vertical-align: middle;
+        @include rem(font-size,70);
+        @media only screen and (min-width: 320px) and (max-width: 800px) {
+            @include rem(font-size,32); padding-left: 15px;
+        }
+    }
+    span{
+       
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 30px;
+        @media only screen and (min-width: 320px) and (max-width: 800px) {
+            padding-left: 15px;
+        }
+       
+    }
+}
+.alert-transaction{
+    background-color: $white;
+    font-size: 11px;
+    color: $base-color;
+    margin: 0;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 5px;padding-right: 5px;
+}
+div.styled-box{
+    background-color: $white;
+    .box-title{
+        background-color:$base-color;
+        text-align: center;
+        color: $white;
+        padding: 0;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        @include rem(font-size,22);
+    }
+}
+.wrapper{
+    h3{
+        background-color: $base-color;
+        color: $white;
+        margin-left: -30px;
+        margin-right: -31px;
+        margin-top: 0px;
+        padding: 12px;
+        text-transform: uppercase;
+    }
+    h4{
+        @include rem(font-size,16);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+.radio-group{
+    padding-top: 20px;
+}

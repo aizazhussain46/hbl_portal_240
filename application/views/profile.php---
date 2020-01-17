@@ -1,0 +1,299 @@
+<?php 
+
+
+include "elements/header.php";
+
+
+$this->db->select('*');
+$this->db->where('Folio_No',$_SESSION['folio']);
+$resultsss = $this->db->get('investoraccountinfo')->result_array();		
+$zakat= $resultsss[0]['ACC_ZAKATSTATUS'];
+$cgt= $resultsss[0]['ACC_CGTSTATUS'];
+$type= $resultsss[0]['ACC_Type'];
+$auth= $resultsss[0]['ACC_Auth'];
+
+$phone= $resultsss[0]['ACC_PHONE'];
+$cell= $resultsss[0]['ACC_SMSCELLNUMBER'];
+$email= $resultsss[0]['ACC_EMAILADDRESS'];
+$address= $resultsss[0]['ACC_ADDRESS'];
+
+$code= $resultsss[0]['ABA_ACCOUNTCODE'];
+$title= $resultsss[0]['Bank_AccountTitle'];
+$bankname= $resultsss[0]['Bank_Name'];
+$bankaddress= $resultsss[0]['Branch_Address'];
+?>
+	  
+		<!---->
+    <img src="<?php echo base_url();?>images/profile-banner.jpg" style="width: 100%">
+
+    <div class="container" style="margin-top: 50px">
+    	
+    	<div class="col-md-6">
+    		<DIV class="header-box">
+    			BASIC INFORMATION
+    		</DIV>
+    		<DIV class="body">
+    			<div class="col-md-6">
+    				Name
+    			</div>    			
+    			<div class="col-md-6">
+    				<?php echo $name;?>
+    			</div>    			
+    			<div class="col-md-6">
+    				Father/Hub Name
+    			</div>
+    			<div class="col-md-6">
+    				<?php echo $fname;?>
+    			</div>   
+    			<div class="col-md-6">
+    				CNIC
+    			</div>    			
+    			<div class="col-md-6">
+    				<?php echo $cnic;?>
+    			</div>    			
+    			<div class="col-md-6">
+    				CNIC Expiry
+    			</div>
+    			<div class="col-md-6">
+    				-
+    			</div>     			 			
+    		</DIV>    		
+    	</div>
+
+    	<div class="col-md-6">
+    		<DIV class="header-box">
+    			ACCOUNT INFORMATION
+    		</DIV>
+    		<DIV class="body">
+    			<div class="col-md-6">
+    				Zakat Status
+    			</div>    			
+    			<div class="col-md-6">
+    				<?php echo $zakat;?>
+    			</div>    			
+    			<div class="col-md-6">
+    				WHT/CGT
+    			</div>
+    			<div class="col-md-6">
+    				<?php echo $cgt;?>
+    			</div>   
+    			<div class="col-md-6">
+    				Account Type
+    			</div>    			
+    			<div class="col-md-6">
+    				<?php echo $type;?>
+    			</div>    			
+    			<div class="col-md-6">
+    				Authentication
+    			</div>
+    			<div class="col-md-6">
+    				<?php echo $auth;?>
+    			</div>     			 			
+    		</DIV>    		
+    	</div>
+
+    	<div class="col-md-6">
+    		<DIV class="header-box">
+                <div class="col-md-6">
+                Contact Information
+                </div>
+                <div class="col-md-6 text-right">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true" data-toggle="modal" data-target="#myModal" style="cursor: pointer;"></i>
+                </div>
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+                                
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                <div class="modal-header">
+
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title" style="color: #000">Contact Information</h4>
+                                </div>
+                                <div class="modal-body">
+
+                                <form method="POST" action="<?php echo base_url().'Customer/contactinformation' ?>">
+                                  <div class="form-group">
+                                    <label for="exampleInputEmail1" style="color: #000">Phone Number</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" pattern="[0-9\+\-]+" placeholder="" required="" name="phone" 
+                                    value="<?php echo $phone;?>">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1"  style="color: #000">Cell Phone</label>
+                                    <input type="text" pattern="[0-9\+\-]+" placeholder=""  class="form-control" id="exampleInputPassword1" required="" name="cell" value="<?php echo $cell;?>" >
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleInputEmail1" style="color: #000">Email Address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="" required="" name="email"  value="<?php echo $email;?>">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1"  style="color: #000">Address</label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" required="" name="address"  value="<?php echo $address;?>">
+                                  </div>
+                                    <input type="hidden" class="form-control" id="exampleInputPassword1" placeholder="" required="" name="folio" value="<?php echo $_SESSION['folio'];?>">
+
+                                  <input type="submit" class="btn btn-default" value="Submit">
+                                </form>
+
+
+
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </div>
+
+
+
+
+
+                                <br>
+    		</DIV>
+    		<DIV class="body">
+    			<div class="col-md-6">
+    				Phone No
+    			</div>    			
+    			<div class="col-md-6">
+    				<?php echo $phone;?>
+    			</div>    			
+    			<div class="col-md-6">
+    				Cell
+    			</div>
+    			<div class="col-md-6">
+    				<?php echo $cell;?>
+    			</div>   
+    			<div class="col-md-6">
+    				Email
+    			</div>    			
+    			<div class="col-md-6">
+    				<?php echo $email;?>
+    			</div>    			
+    			<div class="col-md-6">
+    				Address
+    			</div>
+    			<div class="col-md-6">
+    				<?php echo $address;?>
+    			</div>     			 			
+    		</DIV>    		
+    	</div>
+
+    	<br><br>
+    	<div class="col-md-6">
+    		<DIV class="header-box">
+                <div class="col-md-6">
+                Bank Information
+                </div>
+                <div class="col-md-6 text-right">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true" data-toggle="modal" data-target="#myModal2" style="cursor: pointer;"></i>
+                </div>
+                <br>
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="myModal2" role="dialog">
+                            <div class="modal-dialog">
+                                
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                                <div class="modal-header">
+
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title" style="color: #000">Bank Information</h4>
+                                </div>
+                                <div class="modal-body">
+
+                                <form method="POST" action="<?php echo base_url().'Customer/bankinformation' ?>">
+                                  <div class="form-group">
+                                    <label for="exampleInputEmail1" style="color: #000">Account Number</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" pattern="[0-9]+" placeholder="82983918291" required="" name="accountnumber" 
+                                    value="<?php echo $code;?>">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1"  style="color: #000">Bank Account Title</label>
+                                    <input type="text" pattern="[a-zA-Z\s]+" placeholder="Azeem Khan"  class="form-control" id="exampleInputPassword1" required="" name="accounttitle" value="<?php echo $title;?>" >
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleInputEmail1" style="color: #000">Bank Name</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" required="" name="bankname" pattern="[a-zA-Z\s]+" value="<?php echo $bankname;?>">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleInputPassword1"  style="color: #000">Branch Address</label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" required="" name="address" pattern="[a-zA-Z0-9\s\,\.]+" value="<?php echo $bankaddress;?>">
+                                  </div>
+                                    <input type="hidden" class="form-control" id="exampleInputPassword1" placeholder="" required="" name="folio" value="<?php echo $_SESSION['folio'];?>">
+
+                                  <input type="submit" class="btn btn-default" value="Submit">
+                                </form>
+
+
+
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </div>
+                </div>
+
+                <br>
+    		<DIV class="body" style=" margin-top: -22px; ">
+    			<div class="col-md-6">
+    				Account Number
+    			</div>    			
+    			<div class="col-md-6">
+    				<?php echo $code;?>
+
+    			</div>    			
+    			<div class="col-md-6">
+    				Bank Account Title
+    			</div>
+    			<div class="col-md-6">
+     				<?php echo $title;?>
+   				
+    			</div>   
+    			<div class="col-md-6">
+    				Bank Name
+    			</div>    			
+    			<div class="col-md-6">
+    				<?php echo $bankname;?>
+    				
+    			</div>    			
+    			<div class="col-md-6">
+    				Branch Address
+    			</div>
+    			<div class="col-md-6">
+    				<?php echo $bankaddress;?>
+    				
+    			</div>     			 			
+    		</DIV>    		
+    	</div>    	    	
+    </div>
+
+<?php 
+include "elements/footer.php";
+
+?>
+
+<style type="text/css">
+	.header-box{
+	background: #069198;
+    color: #fff;
+    padding: 20px;
+	}
+	.body {
+    background: #fff;
+    padding: 20px;    padding-bottom: 50px !important;
+	}
+	.body .col-md-6 {
+    margin-bottom: 20px !important;
+}
+.body{
+	height: 200px;    margin-bottom: 35px;
+}
+</style>

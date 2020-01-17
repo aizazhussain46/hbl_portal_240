@@ -1,0 +1,87 @@
+<?php 
+
+
+include "elements/header.php";
+
+?>
+	  
+		<!---->
+    <img src="<?php echo base_url();?>images/profile-banner.jpg" style="width: 100%">
+
+    <div class="container" style="margin-top: 50px">
+    	
+    	<div class="col-md-12">
+    		<DIV class="header-box">
+    			Users
+    		</DIV>
+    		<div class="table-responsvie" style=" height: 247px; overflow: auto; ">           
+            <table class="table table-striped bordered ">
+                <tr style=" background: #696464; color: #fff !important; ">
+                    <td>FOLIO ID</td>
+                    <td>Name</td>
+                    <td>Mobile</td>
+                    <td>CNIC</td>
+                    <td>Status</td>
+                    <td>Option</td>
+                </tr>
+
+<?php
+  $this->db->from('user');
+  $query = $this->db->get();
+  foreach($query->result() as $aa){
+  $folio= $aa->Folio_No;
+  
+$this->db->select('*');
+$this->db->where('Folio_No',$folio);
+$result1 = $this->db->get('investorprofileinfo')->result_array();        
+
+?>
+
+                <tr>
+                    <td><?php echo $folio;?></td>
+                    <td><?php echo $result1[0]['Invester_Name'];?></td>
+                    <td><?php echo $result1[0]['Invester_Mobile_No'];?></td>
+                    <td><?php echo $result1[0]['Invester_CNIC'];?></td>
+                    <td><?php echo $result1[0]['Status'];?></td>
+                    <td>
+                    <?php
+                    if ($aa->Status == "A") {
+                        echo " <a href='Admin/deactive/$folio'>Click to Deactive</a>";
+                    }
+                    if ($aa->Status == "D") {
+                        echo " <a href='Admin/activate/$folio'>Click to Active</a>";
+                    }                    
+                    ?>
+                   
+
+                    </td>
+                </tr>
+  <?php }
+ ?>             
+
+            </table>
+        </div>
+    </div>
+
+<?php 
+include "elements/footer.php";
+
+?>
+
+<style type="text/css">
+	.header-box{
+	background: #069198;
+    color: #fff;
+    padding: 20px;
+	}
+	.body {
+    background: #fff;
+    padding: 20px;    padding-bottom: 50px !important;
+	}
+	.body .col-md-6 {
+    margin-bottom: 20px !important;
+}
+.body{
+	height: 200px;    margin-bottom: 35px;
+}
+</style>

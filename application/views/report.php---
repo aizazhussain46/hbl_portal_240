@@ -1,0 +1,239 @@
+<?php 
+
+include "elements/header.php";
+$this->db->select('*');
+$this->db->where('Folio_No',$_SESSION['folio']);
+$resultsss = $this->db->get('investoraccountinfo')->result_array();   
+$zakat= $resultsss[0]['ACC_ZAKATSTATUS'];
+$cgt= $resultsss[0]['ACC_CGTSTATUS'];
+$type= $resultsss[0]['ACC_Type'];
+$auth= $resultsss[0]['ACC_Auth'];
+
+$phone= $resultsss[0]['ACC_PHONE'];
+$cell= $resultsss[0]['ACC_SMSCELLNUMBER'];
+$email= $resultsss[0]['ACC_EMAILADDRESS'];
+$address= $resultsss[0]['ACC_ADDRESS'];
+
+$code= $resultsss[0]['ABA_ACCOUNTCODE'];
+$title= $resultsss[0]['Bank_AccountTitle'];
+$bankname= $resultsss[0]['Bank_Name'];
+$bankaddress= $resultsss[0]['Branch_Address'];
+
+?>
+		<!---->
+    <img src="<?php echo base_url();?>images/report.jpg" style="width: 100%">
+
+    <div class="container" style="margin-top: 50px">
+    	
+    	<div class="col-md-4" style="padding: 0px;    border-right: 1px solid #d8d8d8;">
+    		<DIV class="header-box">
+          <div class="col-md-12 text-left">
+            <?php 
+            $namex= explode(" ", $name);
+            echo $namex[0].' '.$namex[1];
+            ?>
+            <a href="<?php echo base_url();?>/Customer/printreport" target="_blank"> 
+            <i class="fa fa-print" aria-hidden="true" style="font-size: 21px;border-left: 1px solid #fff;padding: 1px 10px 2px 8px;border-right: 1px solid #fff;float: right;color:#fff"></i>
+            </a>
+            <a href="<?php echo base_url();?>/Customer/pdf" target="_blank">
+            <i class="fa fa-file-pdf-o" aria-hidden="true" style="font-size: 21px;border-left: 1px solid #fff;padding: 1px 10px 2px 8px;border-right: 1px solid #fff;float: right;color:#fff""></i>
+            </a>
+
+          </div><br>
+    		</DIV>
+        <DIV class="body">
+                <div class="col-md-6" style=" font-weight: bold; ">
+                    Father/Hub Name
+                </div>
+                <div class="col-md-6" style=" color: #069198; ">
+                    <?php echo $fname;?>
+                </div> 
+                <hr> 
+                <div class="col-md-6" style=" font-weight: bold; ">
+                    CNIC
+                </div>              
+                <div class="col-md-6" style=" color: #069198; ">
+                    <?php echo $cnic;?>
+                </div>              
+                <div class="col-md-6" style=" font-weight: bold; ">
+                    CNIC Expiry
+                </div>
+                <div class="col-md-6" style=" color: #069198; ">
+                    -
+                </div> 
+                <div class="col-md-6"style=" font-weight: bold; ">
+                    Cell Number
+                </div>              
+                <div class="col-md-6" style=" color: #069198; ">
+                    <?php echo $cell;?>
+                </div> 
+                <div class="col-md-6" style=" font-weight: bold; ">
+                    Address
+                </div>              
+                <div class="col-md-6" style=" color: #069198; ">
+                    <?php echo $address;?>
+                </div>                                                          
+            </DIV>          
+
+
+        </div>
+
+
+
+       <div class="col-md-8"  style="padding: 0px;">
+            <DIV class="header-box" style="background-color: #fff;color: #069198;border-bottom: 1px solid #c2c2c3;">
+              <div class="col-md-6">
+               <h3>FOLIO NUMBER: <?php echo $sessionid;?></h3>
+               
+              </div><br>
+              <div class="col-md-6">
+                <img src="<?php echo base_url();?>images/hbl-assets.jpg" style=" width: 106%; margin-top: -40px; margin-left: -16px; ">
+              </div>
+            </DIV>
+
+            <div style="width: 100%;background-color: #fff;height: 225px;" ><br>
+                <p>7th floor, Emerald Tower, G-19, Block 5, Clifton,</p>
+                <p>Karachi, Pakistan</p>
+                <p>www.hblassets.com</p>
+                <p>Toll-Free Helpline: 0800-HBL- AM(425-26)</p>
+                <p>UAN: 021-111-225-262</p>
+                <p>Fax: 021-99207409, 021-99207407</p>
+            </div>            
+           
+
+        </div>
+
+
+      <div class="col-md-8" style=" padding: 0px; ">
+        <div class="table-responsvie" style=" height: 247px; overflow: auto; ">           
+            <table class="table table-striped bordered ">
+              <tr style=" background: #069198; ">
+                <td style=" color: #fff; "> AS OF (DATE)</td>
+                <td style=" color: #fff; ">FUND</td>
+                <td style=" color: #fff; ">FUND CODE</td>
+                <td style=" color: #fff; ">UNITS VALUE (Rs.)</td>
+
+              </tr>
+                <?php
+                  $this->db->where('Foli_No',$sessionid);
+
+                  $this->db->from('dailyportfoliosummary');
+                  $query = $this->db->get();
+                  foreach($query->result() as $investment){
+                    $fcode= $investment->Fund_Code;
+                    $this->db->select('*');
+                    $this->db->where('Fund_Code',$fcode);
+                    $result = $this->db->get('fundnames')->result_array();        
+                    $fname= $result[0]['Fund_Name'];
+
+                    $fundName= explode('(', $fname);
+
+                ?>
+                <tr>    <td><?php echo $investment->InsertDate;?></td>
+                        <td >
+                            <?php echo $fundName[0];?>
+                        </td>
+                        <td><?php echo $result[0]['Fund_Code'];?></td>
+                        <td ><?php echo number_format($investment->Amount1, 2, '.', ',');?></td>
+                </tr>
+                <?php } ?>                   
+            </table>
+        </div>
+   
+
+
+        </div>
+
+
+
+
+
+        <div class="col-md-4" style=" padding: 0px; ">
+            <DIV class="header-box" style=" background: #707271; height: 50px; padding-top: 15px; ">
+                <center style=" font-size: 16px; ">PORTFOLIO SUMMARY</center>
+            </DIV>
+            
+
+
+<div id="piechart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['HPL-F', 8],
+  ['HBL MF', 2],
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'', 'width':380, 'height':250};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script> 
+        </div>
+                <div class="col-md-12" style="margin-top: -35px;background: #707271;color: #fff;padding: 18px;text-align: center;    margin-bottom: 20px;">
+                    <p style="font-size: 20px">Total Value of Your investment Investment is (Rs.)
+                    <?php
+                    $this->db->select_sum('Amount1');
+                    $this->db->where('Foli_No',$sessionid);
+                    $abc = $this->db->get('dailyportfoliosummary')->result_array();    
+                    $sum_value= array_sum($abc[0]);
+
+                    echo number_format($sum_value, 2, '.', ',')
+
+                    ?>
+
+<p>
+
+
+          
+        </div>
+
+
+
+
+<?php 
+include "elements/footer.php";
+
+?>
+
+<style type="text/css">
+	.header-box{
+	background: #069198;
+    color: #fff;
+    padding: 20px;
+	}
+	.body {
+    background: #fff;
+    padding: 20px;    padding-bottom: 50px !important;
+	}
+	.body .col-md-6 {
+    margin-bottom: 20px !important;
+}
+.body{
+	height: 225px;  
+}html, body {
+    font-family: 'Montserrat-Regular';
+    font-size: 100%;
+    background: #F3F3F4;
+    overflow-x: initial;
+}.col-md-6 {
+    font-size: 12px;
+  }
+  .col-md-8 p {
+    text-align: right;
+    padding-top: 5px;
+    padding-right: 26px;
+    color: #8c8c8c;
+}
+</style>

@@ -1,0 +1,621 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>:: HBL Corporate Presentation Demo ::</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+		<link rel="stylesheet" href="css/animate.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet"> 
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- Bootstrap core CSS -->
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!-- Chart js -->
+		<script src="js/Chart.bundle.js"></script>
+		<script src="js/utils.js"></script>
+		
+		<!-- Reveal js Chart -->
+		<script type="text/javascript" src="plugin/chart/Chart.min.js"></script>
+		<script type="text/javascript" src="plugin/chart/csv2chart.js"></script>
+
+	</head>
+	<body>
+	
+		<div class="reveal">
+		<div id="header">
+			<div class="col-sm-12">
+			<img src="./images/header-logo-img.png" alt="">
+			</div>
+		</div>
+			<div class="slides">
+				<section data-transition="concave" data-background="./images/intro-img.png" data-background-repeat="no-repeat" data-background-position="top center" data-background-size="100%">
+				
+				<div id="tittle-page">
+					<img data-transition="concave" data-animate="slideleft" src="./images/hbl-logo.png" alt="">
+					<h4>Corporate Presentation</h4>
+				</div>	
+				</section >
+                
+                 <section data-transition="concave" data-background="./images/intro-img.png" data-background-repeat="no-repeat" data-background-position="top center" data-background-size="100%">
+                	<div class="col-lg-12 sponsor-slide">
+                        <h2 data-animate="fadeInUp" >SPONSOR</h2>
+                    </div>
+                </section>
+				
+				<section  data-transition="slide">
+					<h3 class="main-heading" data-animate="fadeInRight">Sponsor</h3>
+					<div class="col-lg-7 slide-2a" >
+					<p class="slide" data-animate="fadeInLeft">
+					The Government of Pakistan privatized HBL in 2004 through which AKFED acquired 51% of the Bank's shareholding and the management control. 
+<br/><br/>
+Current network is over 1,600 branches and 1,700 ATMs globally and a customer base exceeding eight million relationships.<br/> 
+<br/>
+Largest bank by:<br/>
+Deposits<br/>
+Balance sheet<br/>
+Capital<br/>
+Profitability <br/>
+<br/>
+With a global presence in over 25 countries spanning across four continents,  HBL is also the largest domestic multinational. <br/>
+<br/>
+HBL is rated AAA by JCR-VIS.
+<br/>
+</p>
+					</div>
+					
+					<div class="col-lg-5 slide-2b ">
+					<h6 class="fade-up" data-animate="fadeInRight">HBL was the first commercial bank to be established in Pakistan in 1947.</h6>
+					<img src="./images/building.png" alt="" data-animate="fadeInLeft">
+					</div>
+						
+					</section>
+					
+					<section data-transition="concave" class="directors-section">
+					<h3 class="main-heading" data-animate="fadeInRight">Sponsor</h3>
+				     <div class="col-sm-1 deposit-chart"></div>
+				     <div class="col-sm-4 deposit-chart">
+				     	<h4 data-animate="fadeInUp">Deposit Base of Big Five Banks</h4>
+				     	<canvas data-chart="bar">
+<!-- 
+{
+ "data": {
+  "labels": ["2012"," 2013"," 2014"," 2015"," 2016"],
+  "datasets": [
+   {
+    "data":[1200,1400,1500,1700,1900],
+    "label":"HBL","backgroundColor":"rgba(0,168,150,1)"
+   },
+   {
+    "data":[750,900,980,1100,1250],
+    "label":"UBL","backgroundColor":"rgba(0,112,192,1)"
+   },
+   {
+    "data":[580,620,650,700,800],
+    "label":"MCB","backgroundColor":"rgba(165,165,165,1)"
+   },
+   {
+    "data":[1010,1050,1220,1430,1650],
+    "label":"NBP","backgroundColor":"rgba(255,192,0,1)"
+   },
+   {
+    "data":[500,600,700,780,800],
+    "label":"ABL","backgroundColor":"rgba(197,90,17,1)"
+   }
+   ]
+ }, 
+ "options": { "responsive": "true" }
+}
+-->
+</canvas>
+				     </div>
+				     
+				     <div class="col-sm-1 deposit-chart"></div>
+				     
+				     <div class="col-sm-4 deposit-chart">
+				     	<h4 data-animate="fadeInDown">Earnings per Share - Big Five Banks</h4>
+		     	<canvas data-chart="line">
+<!-- This is a comment -->	
+, 0, 0, 0, 0, 30
+
+HBL,  18, 16, 22, 24, 23
+UBL, 16, 17, 19, 21, 22
+MCB, 21, 19, 22, 21, 20
+NBP, 7, 3, 8, 9, 11
+ABL, 11, 13, 13, 12.5, 12
+
+<!-- 
+{ 
+"data" : {
+	"labels" : ["2012", "2013", "2014", "2015", "2016"],
+	"datasets" : [
+	{ "borderColor": "transparent",  "backgroundColor":"transparent" },
+	{ "borderColor": "#0ea28f", "backgroundColor":"transparent" },
+	{ "borderColor": "#ec7524",  "backgroundColor":"transparent" },
+	{ "borderColor": "#9f9f9f",  "backgroundColor":"transparent" },	
+	{ "borderColor": "#ffbc0e",  "backgroundColor":"transparent" },
+	{ "borderColor": "#3c6cc2",  "backgroundColor":"transparent" }
+
+	]
+	}
+}
+-->
+</canvas>
+				     </div>
+       </section>
+
+				<section  data-transition="concave" class="board-directors">
+				<h3 class="main-heading" data-animate="fadeInRight">board of directors</h3>
+					<div class="col-sm-12 bd-team">
+                    <div class="col-sm-2" style="float:left"></div>
+                    <div class="col-sm-8" style="float:left">
+                    <div class="col-sm-3 team-member" data-animate="fadeInRight">
+                    <img src="images/bd01.jpg" alt="">
+                    <strong>Ava Ardeshir Cowasjee </strong>
+                    <span>Director</span>
+                    <p>Ms. Ava Ardeshir Cowasjee is a prominent person in the shipping industry of Pakistan. She also a director in PNSC</p>
+                    </div>
+                    <div class="col-sm-3 team-member " data-animate="fadeInRight">
+                    <img src="images/003.jpg" alt="">
+                    <strong>Salahuddin Manzoor</strong>
+                    <span>Director</span>
+                    <p>Mr. Manzoor has wide ranging international experience expanding over 33 years. He is an MBA from Wharton and is currently working as Global Treasurer at HBL. Prior to that, Mr. Manzoor has held various senior positions in several world class organizations.
+</p>
+                    </div>
+                    <div class="col-sm-3 team-member " data-animate="fadeInRight">
+                    <img src="images/bd02.jpg" alt="">
+                    <strong>Mr. Rizwan Haider</strong>
+                    <span>Director</span>
+                    <p>Mr. Rizwan Haider was appointed on the Board since April 2013. He is a seasoned banker with over thirty years of diverse banking experience in senior management positions, with local and international banks. He is currently the Chief Risk Officer for Habib Bank Limited (HBL).</p>
+                    </div>
+                    </div>
+                    <div class="col-sm-2" style="float:left"></div>
+                    </div>
+					</section>
+					
+					<section  data-transition="concave" class="board-directors">
+				<h3 class="main-heading" >board of directors</h3>
+					<div class="col-sm-12 bd-team">
+                    <div class="col-sm-2" style="float:left"></div>
+                    <div class="col-sm-8" style="float:left">
+                    <div class="col-sm-3 team-member" data-animate="fadeInRight">
+                    <img src="images/003.jpg" alt="">
+                    <strong>Taufiq Chinoy</strong>
+                    <span>Chairman</span>
+                    <p>Mr. Chinoy is renowned industrialist of the 
+Country. He has served on the Board of Directors of various listed and unlisted companies. <br> Mr. Chinoy is currently also the Chairman of New Jubilee Insurance Company Ltd., Packages Ltd. and Pakistan Cables Ltd. 
+</p>
+                    </div>
+                    <div class="col-sm-3 team-member " data-animate="fadeInRight">
+                    <img src="images/bd03.jpg" alt="">
+                    <strong>Nadeem Abdullah</strong>
+                    <span>Director</span>
+                    <p>Mr. Nadeem Abdullah graduated as commerce graduate from MC Gill University Canada. <br> Mr. Nadeem Abdullah graduated as commerce graduate from MC Gill University Canada. 
+</p>
+                    </div>
+                    <div class="col-sm-3 team-member " data-animate="fadeInRight">
+                    <img src="images/003.jpg" alt="">
+                    <strong>Rayomond Kotwal</strong>
+                    <span>Director</span>
+                    <p>Rayomond Kotwal has over 30 years of experience. He has worked in senior Finance roles with United Bank Limited, NIB Bank Limited, Citibank NA, Citi Cards Canada Inc. and ICI Pakistan Limited. He is currently the Chief Financial Officer of Habib Bank Limited, Director of Habib Allied Holdings Limited, UK, Sindh Engro Coal Mining Company and Engro Powergen Thar (Pvt.) Limited.
+</p>
+                    </div>
+                    </div>
+                    <div class="col-sm-2" style="float:left"></div>
+                    </div>
+					</section>
+
+					
+                    <section  data-transition="concave" class="team-slide">
+					
+					<section>
+					<div class="col-sm-12 team">
+                    <div class="col-sm-2" style="float:left"></div>
+                    <div class="col-sm-8" style="float:left">
+                    <div class="col-sm-3 team-member" data-animate="fadeInRight">
+                    <img src="images/003.jpg" alt="">
+                    <strong>Tauqir Shamshad </strong>
+                    <span>Head of Fixed Income <br/>&nbsp;</span>
+                    <p>MBA, M.COM <br/> PGD in Islamic Banking & Finance</p>
+                    <em>25+ Years Of Experience</em>
+                    </div>
+                    <div class="col-sm-3 team-member " data-animate="fadeInRight">
+                    <img src="images/004.jpg" alt="">
+                    <strong>Mohammad Amir Khan</strong>
+                    <span>Head of Product <br/>Development & Strategy</span>
+                    <p>MBA from Adamson <br/>University, Manila, Philippines. <br/>&nbsp;</p>
+                    <em>23+ Years Of Experience</em>
+                    </div>
+                    <div class="col-sm-3 team-member " data-animate="fadeInRight">
+                    <img src="images/003.jpg" alt="">
+                    <strong>Sateesh Balani</strong>
+                    <span>Head of Research <br/>&nbsp;</span>
+                    <p>CFA Charter Holder <br/>MBA From IBA Karachi <br/>&nbsp;</p>
+                    <em>23+ Years Of Experience</em>
+                    </div>
+                    </div>
+                    <div class="col-sm-2" style="float:left"></div>
+                    </div>
+					</section>
+					
+					<section>
+                    <div class="col-sm-12 team">
+                    <div class="col-sm-2" style="float:left"></div>
+                    <div class="col-sm-8" style="float:left">
+                    <div class="col-sm-3 team-member" data-animate="fadeInRight">
+                    <img src="images/001.jpg" alt="">
+                    <strong>Farid Ahmed Khan</strong>
+                    <span>Chief Executive Officer</span>
+                    <p>CFA Charter Holder.<br/> MBA FROM IBA</p>
+                    <em>23+ Years Of Experience</em>
+                    </div>
+                    <div class="col-sm-3 team-member " data-animate="fadeInRight">
+                    <img src="images/002.jpg" alt="">
+                    <strong>Muhammad Imran</strong>
+                    <span>Chief Investment Officer</span>
+                    <p>MBA <br/>&nbsp;</p>
+                    <em>16+ Years Of Experience</em>
+                    </div>
+                    <div class="col-sm-3 team-member " data-animate="fadeInRight">
+                    <img src="images/003.jpg" alt="">
+                    <strong>Noman Qurban</strong>
+                    <span>CFO and Company Secretary</span>
+                    <p>CA From ICMAP <br/>&nbsp;</p>
+                    <em>23+ Years Of Experience</em>
+                    </div>
+                    </div>
+                    <div class="col-sm-2" style="float:left"></div>
+                    </div>
+					</section>
+					
+					</section>
+                    
+                    <section  data-transition="concave" class="about-slide">
+					<h3 class="main-heading" data-animate="fadeInRight">About Us</h3>
+					<div class="col-sm-12 about " data-animate="fadeInRight">
+					<h2 data-animate="fadeInRight">HBL AMC</h2>
+					<div class="col-sm-1 about-h"></div>
+					<div class="col-sm-1 about-h"></div>
+					<div class="col-sm-1 about-h " data-animate="fadeInUp" >
+					<div class="hexagon"></div>
+					<p>PKR 28.3 <br/> billion <br/>Equity AUM </p>
+					</div>
+					<div class="col-sm-1 about-h " data-animate="fadeInUp">
+					<div class="hexagon"></div>
+					<p>14<br/> Open-end <br/> Funds </p>
+					</div>
+					<div class="col-sm-1 about-h " data-animate="fadeInUp">
+					<div class="hexagon"></div>
+					<p>Total AUMs <br/> Rs. 61.7 <br/>Billion</p>
+					</div>
+					<div class="col-sm-1 about-h " data-animate="fadeInUp">
+					<div class="hexagon"></div>
+					<p>Two <br/> Closed-end <br/>Funds</p>
+					</div>
+					<div class="col-sm-1 about-h " data-animate="fadeInUp">
+					<div class="hexagon"></div>
+					<p>2  VPS <br/>Schemes</p>
+					</div>
+					<div class="col-sm-1 about-h " data-animate="fadeInUp">
+					<div class="hexagon"></div>
+					<p>5th Largest <br/> AMC in <br/>Pakistan</p>
+					</div>
+					
+					<p style="margin-top:86px;" class="" data-animate="fadeInRight">HBL Asset Management Limited (HBL AMC) is a wholly owned subsidiary of HBL, the largest commercial bank in Pakistan.</p>
+					<hr class="" data-animate="fadeIn">
+					<p class="" data-animate="fadeInRight">With a nationwide foot print of retail and corporate clients, HBL AMC is one of the largest private fund management company in the country. We offer both conventional and Shariah-compliant investment products.</p>
+					<hr class="" data-animate="fadeIn">
+					<p class="" data-animate="fadeInRight">During the year 2016, HBL AMC acquired PICIC Asset Management Company Limited which has subsequently merged into HBL AMC. The acquisition has increased our product suite to 18 mutual fund schemes and plans.</p>
+					<hr class="" data-animate="fadeIn">
+					<p class="" data-animate="fadeInRight">HBL Asset Management is rated AM2 by JCR-VIS.</p>
+					
+					</div>
+					</section>
+                    
+					<section  class="hbl-whyus" data-transition="concave" data-background-transition="concave">
+					<h3 class="main-heading" data-animate="fadeInRight">Why Us</h3>
+                	<h4 data-animate="fadeInUp">Why HBL should be YOUR preferred partner?</h4>
+                    <p style="padding-top:15px;" class="" data-animate="fadeInRight">HBL Asset Management Limited (HBL AMC) is backed by the largest and strongest <br>
+     Financial institution of Pakistan which boasts of 75 years of rich and successful <br>
+     history. The franchise is associated with trust and credibility for our investors in <br> 
+     more than 25 countries that their savings are in safe hands. 
+</p>
+			<hr class="" data-animate="fadeInRight"/>
+            <p class="" data-animate="fadeInRight">We provide a seamless financial experience to our clients in partnership with HBL. <br> 
+The entire product suite ranging from bank accounts to cash management and saving plans available <br>
+under one umbrella.
+</p>
+			<hr class="" data-animate="fadeInRight"/>
+            <p class="" data-animate="fadeInRight">We manage one of the largest equity portfolios in the country with a size of over Rs 28.3 billion. <br>
+Our mutual funds have a demonstrated track record of over 10 years of superior returns.
+</p>
+			<hr class="" data-animate="fadeInRight"/>
+            <p class="" data-animate="fadeInRight">No conflicts and no third parties involved as we take pride in providing all services in-house. <br>
+Our experienced research team provides detailed equity and economic reports.
+</p>
+			<hr class="" data-animate="fadeInRight"/>
+            <p class="" data-animate="fadeInRight">An experienced management team boasting exposure of both local and international markets.</p>
+                </section>
+					
+                    <section  class="directors-section">
+					<h3 class="main-heading" data-animate="fadeInRight">About Us</h3>
+					<div class="col-lg-6 hbl-help-slide">
+               
+                    	<img src="images/Tech-support-image.png" data-animate="bounceIn"/>
+                    </div>
+					<div class="col-lg-6 hbl-help-slide">
+                    	<ul>
+                        	<li class="" data-animate="fadeInRight">HBL AMC is a Non-Banking Finance Company incorporated under the Companies Ordinance 1984.</li>
+                            <li class="" data-animate="fadeInRight">It has the licensed to undertake asset management and advisory services.</li>
+                            <li class="" data-animate="fadeInRight">Principal place of business is located at:</li>
+                            <li class="" data-animate="fadeInRight">7th Floor, Emerald Tower, G-19, Block 5, Main Clifton Road, Clifton, Karachi.</li>
+                            <li class="" data-animate="fadeInRight">Securities and Exchange Commission of Pakistan (SECP) is the regulatory body which monitors and controls the asset management industry in the country.</li>
+                            <li class="" data-animate="fadeInRight">HBL AMC works under the NON BANKING FINANCE COMPANIES AND NOTIFIED ENTITIES REGULATIONS, 2008.</li>
+                            <li class="" data-animate="fadeInRight">Mutual Fund Association of Pakistan (MUFAP)  provides the major guidelines.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section  data-transition="concave" class="milestones">
+				    <h3 class="main-heading" data-animate="fadeInRight">MILESTONES</h3>
+				    
+				    <div id="mar-2007" data-animate="fadeInUp">
+				    <strong>Mar’2007</strong>
+				    <img src="images/milestones-stock.jpg" alt="">
+				    <p>Launch of First Fund HBL IF</p>
+					</div>
+			    
+			   		<div id="apr-2007" class="" data-animate="fadeInDown">
+				    <p>Started with Rs. 2.7 billion Asset Under Management</p>
+				    <img src="images/milestones-stock.jpg" alt="">
+				    <strong>Apr’2007</strong>
+					</div>
+		    
+		    		<div id="aug-2007" class="" data-animate="fadeInUp">
+				    <strong>Aug’2007</strong>
+				    <img src="images/milestones-stock.jpg" alt="">
+				    <p>Launch of Stock Market Fund HBL SF</p>
+					</div>
+			    
+			    	<div id="dec-2007" class="" data-animate="fadeInDown">
+				    <p>Launch of Balanced Fund HBL MAF</p>
+				    <img src="images/milestones-stock.jpg" alt="">
+				    <strong>Dec’2007</strong>
+					</div>
+			    
+			    	<div id="jul-2010" class="" data-animate="fadeInUp">
+				    <strong>Jul’2010</strong>
+				    <img src="images/milestones-stock.jpg" alt="">
+				    <p>Launch of Money Market Fund HBL MMF</p>
+					</div>
+			    
+			    	<div id="may-2011" class="" data-animate="fadeInDown">
+				    <p>Islamic Money Market Fund HBL IMMF</p>
+				    <img src="images/milestones-stock.jpg" alt="">
+				    <strong>May’2011</strong>
+					</div>
+			    
+			    	<div id="jul-2011" class="" data-animate="fadeInUp">
+				    <strong>Jul’2011</strong>
+				    <img src="images/milestones-stock.jpg" alt="">
+				    <p>Crossed Rs. 10 billion Mark</p>
+					</div>
+			    
+			    	<div id="dec-2011" class="" data-animate="fadeInDown">
+				    <p>Launch of Pension Schemes HBL PF, HBLIPF</p>
+				    <img src="images/milestones-stock.jpg" alt="">
+				    <strong>Dec’2011</strong>
+					</div>
+			    
+			    	<div id="jul-2013" class="" data-animate="fadeInUp">
+				    <strong>Jul’2013</strong>
+				    <img src="images/milestones-stock.jpg" alt="">
+				    <p>Crossed Rs. 20 billion Mark</p>
+					</div>
+			    
+			    	<div id="jun-2015" class="" data-animate="fadeInDown">
+				    <p>Acquisition of PICIC Asset Management</p>
+				    <img src="images/milestones-stock.jpg" alt="">
+				    <strong>Jun’2015</strong>
+					</div>
+			    
+			    	<div id="sep-2016" class="" data-animate="fadeInUp">
+				    <strong>Sep’2016</strong>
+				    <img src="images/milestones-stock.jpg" alt="">
+				    <p>Merger Process Completed</p>
+					</div>
+			    
+			    	<div id="dec-2016" class="" data-animate="fadeInDown">
+				    <p>Rs. 50 billion Mark of Assets Under Management Achieved</p>
+				    <img src="images/milestones-stock.jpg" alt="">
+				    <strong>Dec’2016</strong>
+					</div>
+				    </section>				    
+						
+				<section  class="mutual-funds" data-transition="concave" data-background-transition="concave">
+				<div class="col-sm-6" style="margin:0 auto;">
+				<h4 data-animate="fadeInUp">What are Mutual Funds?</h4>
+				<p>&nbsp;</p>
+				<p class="" data-animate="fadeInRight">A mutual fund is an investment vehicle comprising a pool of funds collected from many investors for the purpose of investing in securities such as stocks, bonds, money market instruments, securities, treasury notes and other capital market instruments.</p>
+				<p class="" data-animate="fadeInRight">A mutual fund is an investment vehicle comprising a pool of funds collected from many investors for the purpose of investing in securities such as stocks, bonds, money market instruments, securities, treasury notes and other capital market instruments.</p>
+				<p class="" data-animate="fadeInRight">Investors who purchase units of a mutual fund are its unit‐holders.</p>
+				<p class="" data-animate="fadeInRight">Investors who purchase units of a mutual fund are its unit‐holders.</p>
+				</div>
+				<img src="images/mf-img01.png" alt="" data-animate="fadeInRight">
+				</section>
+				
+				
+				<section  class="ad-mutual-funds" data-transition="concave" data-background-transition="concave">
+				<div class="col-sm-6" style="margin:0 auto;">
+				<h4 data-animate="fadeInUp">Advantages of Investing in Mutual Funds</h4>
+				
+				<p class="" data-animate="fadeInRight"><strong>Mutual funds are an easy, convenient and affordable way of gaining access to capital markets. Each investor has a stake in the assets and earnings of the fund in proportion to the amount of their investments. The benefits of mutual funds include:</strong></p>
+				<p class="" data-animate="fadeInRight"><strong>Professional Management:</strong><br/>The AMC appoints a team of investment professionals, assisted by qualified research analysts, to manage the portfolio of the fund in conformity with the Investment objective of the fund.</p>
+				<p class="" data-animate="fadeInRight"><strong>Tax Efficient Way to Save:</strong><br/> Tax Efficient Way to Save: 
+Since the fund it self is not taxed if it distributes at least 90% of its unrealized income, investors earn tax free returns – at the time of redemption capital gain tax does apply but this rate becomes zero if investment is held for 1 year and above. Also, salaried and non-salaried individuals can avail tax rebate.</p>
+				<p class="" data-animate="fadeInRight"><strong>Diversification:</strong><br/> Mutual Fund portfolios usually consist of multiple investment positions/vehicles across sectors and companies, and are thus better able to mitigate risk by virtue of the their diverse portfolio. In short, a mutual fund does not put “all its eggs in one basket”. This reduces the risk an investor faces while investing in one or two securities.</p>
+				<p>&nbsp;</p>
+				
+				</div>
+				<img src="images/mf-img02.png" alt="" data-animate="fadeInRight">
+				</section>
+				
+				<section  class="ad-mutual-funds" data-transition="concave" data-background-transition="concave">
+				<div class="col-sm-6" style="margin:0 auto;">
+				<h4 data-animate="fadeInUp">Advantages of Investing in Mutual Funds</h4>
+				
+				<p class="" data-animate="fadeInRight"><strong>Liquidity:</strong><br/>Your money is available within 1‐3 working days. Open‐end mutual funds provide a unique opportunity to investors in liquidating their investment at a redemption price determined through the NAV methodology.</p>
+				<p class="" data-animate="fadeInRight"><strong>Reduction of transaction costs:</strong><br/> A direct investor bears all the cost of investing such as brokerage costs, and custody of security costs. When going through a fund, you have the benefit of economies of scale; the fund pay lesser costs because of larger volumes, a benefit passed on to its investor.</p>
+				<p class="" data-animate="fadeInRight"><strong>Convenience: </strong><br/> Investors can choose for automatic reinvestment or periodic distribution of the earnings of their units in the fund. Further, the investors don’t need to open CDC Account or to transfer their units through brokerage. Mutual funds also offers a wide variety of services including account statements at any time on investors request, toll free accessibility, SMS alerts dedicated investors support and designated Investment Centers for added convenience. Investors can also switch from one fund to another at any time.</p>
+				<p class="" data-animate="fadeInRight"><strong>Time:</strong><br/> Generally an investor does not have the time to actively manage portfolios. AMCs generally have a team of dedicated professionals who are relentlessly researching and analyzing stocks, visiting companies to meet management, determining business cycle ups and downs, studying macroeconomic trends, forecasting interest rate fluctuations and interpreting fiscal as well as monetary policy measures to see how they affect the movement of securities.</p>
+				
+				
+				</div>
+				<img src="images/mf-img02.png" alt="" data-animate="fadeInRight">
+				</section>
+				
+				
+				
+				
+				
+            		
+			</div>
+			
+		</div>
+<footer>
+			<div class="col-sm-4 weblink">
+			<img src="./images/glob-icon.png" alt="">
+			<p><a href="http://hblasset.com/" target="_blank">www.hblasset.com</a></p>
+			</div>
+			<div class="col-sm-4 copyright"><p>©2017 HBL Asset Management.</p></div>
+			<div class="col-sm-4 social">
+			<a href="#"><img src="./images/linkedin-icon.png" alt=""></a>
+			<a href="#"><img src="./images/facebook-icon.png" alt=""></a>
+			<a href="#"><img src="./images/twitter-icon.png" alt=""></a>
+			<p>Follow Us On :</p>
+			
+			</div>
+			</footer>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script src="js/wow.min.js"></script>
+		
+		<!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<script>
+			// Set animation delay if data-delay is specified
+Reveal.addEventListener('ready', function ( event ) {
+  $('*[data-delay]').each( function () { 
+    var delay = $(this).attr("data-delay");
+      $(this).css("-webkit-animation-delay", delay+"s"); 
+      $(this).css("animation-delay", delay+"s"); 
+  });
+});
+
+// Set animation duration if data-duration is specified
+Reveal.addEventListener('ready', function ( event ) {
+  $('*[data-duration]').each( function () { 
+    var duration = $(this).attr("data-duration");
+      $(this).css("-webkit-animation-duration", duration+"s"); 
+      $(this).css("animation-duration", duration+"s"); 
+  });
+});
+
+// Animate items that are not in a fragment
+Reveal.addEventListener('slidechanged', function( event ) {
+  // Animate elements that are not a fragment (or in a fragment)
+  var filter = '*[data-animate]:not(.fragment):not(.fragment *)';
+  
+  $(event.currentSlide).find(filter).each( function () {
+    $(this).addClass('animated');
+    $(this).addClass($(this).attr('data-animate'));
+  });		
+  $(event.previousSlide).find(filter).each( function () {
+    $(this).removeClass('animated');
+    $(this).removeClass($(this).attr('data-animate'));
+  });		
+});
+
+// Animate fragments
+Reveal.addEventListener('fragmentshown', function( event ) {
+  function loop(i, el) { 
+      if ($(el).attr('data-animate')) {
+        $(el).addClass('animated');
+        $(el).addClass($(el).attr('data-animate'));
+      }
+      $.each($(el).children().not('.fragment'), loop);
+  };
+  $.each(event.fragments, loop);
+});
+
+// Make the animation runnable again if fragment is hidden
+Reveal.addEventListener('fragmenthidden', function( event ) {	  
+  function loop(i, el) { 
+      if ($(el).attr('data-animate')) {
+        $(el).removeClass('animated');
+        $(el).removeClass($(el).attr('data-animate'));
+      }
+      $.each($(el).children().not('.fragment'), loop);
+  };
+  $.each(event.fragments, loop);
+});
+
+		</script>
+		
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				// The "normal" size of the presentation, aspect ratio will be preserved
+				// when the presentation is scaled to fit different resolutions. Can be
+				// specified using percentage units.
+				width: 1920,
+				height: 970,
+				
+				
+				chart: {
+					defaults: { 
+						global: { 
+							legend: {position: "bottom"},
+								}, 
+						   	},
+			
+				},
+				
+				// Factor of the display size that should remain empty around the content
+				margin: -0.05,
+
+				// Bounds for smallest/largest possible scale to apply to content
+				minScale: 0.2,
+				maxScale: 1.5,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chart/Chart.min.js' },				
+					{ src: 'plugin/chart/csv2chart.js' },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+		
+		
+	
+	</body>
+</html>

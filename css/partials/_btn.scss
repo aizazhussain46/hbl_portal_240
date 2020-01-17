@@ -1,0 +1,33 @@
+.btn{
+ &.btn-default{
+     background-color: $base-gray;
+     outline: 0;
+     background-image: none;
+     border:0;
+     border-radius: 0;
+     padding: 30px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     padding-left: 10px;
+     padding-right: 10px;
+     color: $white;
+     font-size: 17px;
+     i.icon{
+         color: #ffcc00;
+     }
+ }
+ &.btn-primary{
+    background-color: $base-color;
+    outline: 0;
+    background-image: none;
+    border:0;
+    border-radius: 0;
+    padding: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: $white;
+    font-size: 17px;
+ }
+} 

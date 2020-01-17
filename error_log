@@ -1,0 +1,100 @@
+[01-Nov-2017 20:01:01 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/sysmtech/public_html/hblbank/application/views/dashboard.php on line 44
+[01-Nov-2017 20:17:42 UTC] PHP Parse error:  syntax error, unexpected '$phone' (T_VARIABLE) in /home/sysmtech/public_html/hblbank/application/views/profile.php on line 12
+[01-Nov-2017 20:17:58 UTC] PHP Parse error:  syntax error, unexpected '$phone' (T_VARIABLE) in /home/sysmtech/public_html/hblbank/application/views/profile.php on line 12
+[01-Nov-2017 20:25:51 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/sysmtech/public_html/hblbank/application/views/profile.php on line 168
+[01-Nov-2017 20:25:59 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/sysmtech/public_html/hblbank/application/views/profile.php on line 168
+[01-Nov-2017 20:33:00 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/sysmtech/public_html/hblbank/application/views/dashboard.php on line 81
+[01-Nov-2017 20:33:01 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/sysmtech/public_html/hblbank/application/views/dashboard.php on line 81
+[01-Nov-2017 20:33:01 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/sysmtech/public_html/hblbank/application/views/dashboard.php on line 81
+[01-Nov-2017 20:33:01 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/sysmtech/public_html/hblbank/application/views/dashboard.php on line 81
+[01-Nov-2017 20:44:51 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/sysmtech/public_html/hblbank/application/views/profile.php on line 173
+[02-Nov-2017 07:24:27 UTC] PHP Parse error:  syntax error, unexpected 'exit' (T_EXIT) in /home/sysmtech/public_html/hblbank/application/controllers/Register.php on line 239
+[02-Nov-2017 09:37:20 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in /home/sysmtech/public_html/hblbank/application/views/report.php on line 161
+[06-Nov-2017 17:38:33 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/sysmtech/public_html/hblbank/application/controllers/Customer.php on line 271
+[06-Nov-2017 17:39:12 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/sysmtech/public_html/hblbank/application/controllers/Customer.php on line 271
+[06-Nov-2017 17:41:31 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/sysmtech/public_html/hblbank/application/controllers/Customer.php on line 271
+[06-Nov-2017 17:41:40 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/sysmtech/public_html/hblbank/application/controllers/Customer.php on line 271
+[06-Nov-2017 17:42:10 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/sysmtech/public_html/hblbank/application/controllers/Customer.php on line 271
+[06-Nov-2017 17:42:23 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/sysmtech/public_html/hblbank/application/controllers/Customer.php on line 271
+[06-Nov-2017 17:42:25 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/sysmtech/public_html/hblbank/application/controllers/Customer.php on line 271
+[11-Nov-2017 13:23:44 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/sysmtech/public_html/hblbank/application/views/admin/transaction.php on line 54
+[11-Nov-2017 15:05:00 UTC] PHP Parse error:  syntax error, unexpected '$result_tran_id' (T_VARIABLE), expecting ',' or ';' in /home/sysmtech/public_html/hblbank/application/views/admin/transaction.php on line 143
+[12-Nov-2017 07:28:00 UTC] PHP Fatal error:  Cannot use [] for reading in /home/sysmtech/public_html/hblbank/application/controllers/Download_cvs.php on line 44
+[13-Nov-2017 17:06:19 UTC] PHP Fatal error:  Call to a member function result() on a non-object in /home/sysmtech/public_html/hblbank/application/views/admin/profile.php on line 30
+[13-Nov-2017 17:23:36 UTC] PHP Parse error:  syntax error, unexpected 'dasd' (T_STRING), expecting ',' or ';' in /home/sysmtech/public_html/hblbank/application/views/admin/profile.php on line 62
+[13-Nov-2017 17:32:01 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ';' or '{' in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 424
+[13-Nov-2017 17:42:11 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN), expecting ',' or ';' in /home/sysmtech/public_html/hblbank/application/views/admin/profile.php on line 62
+[13-Nov-2017 18:14:40 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ')' in /home/sysmtech/public_html/hblbank/application/models/Customer_panel.php on line 389
+[13-Nov-2017 18:50:26 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/sysmtech/public_html/hblbank/application/models/Customer_panel.php on line 442
+[15-Nov-2017 18:57:36 UTC] PHP Fatal error:  Cannot redeclare Admin::reject_contactinfo() in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 494
+[18-Nov-2017 06:30:08 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/sysmtech/public_html/hblbank/application/views/admin/profile.php on line 46
+[18-Nov-2017 06:49:40 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/sysmtech/public_html/hblbank/application/views/admin/admins.php on line 54
+[18-Nov-2017 08:24:50 UTC] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE) in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 950
+[18-Nov-2017 08:25:04 UTC] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE) in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 950
+[18-Nov-2017 08:38:03 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 1006
+[18-Nov-2017 09:33:03 UTC] PHP Fatal error:  Call to undefined function md() in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 1003
+[18-Nov-2017 10:41:09 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE), expecting ';' or '{' in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 1087
+[18-Nov-2017 10:41:35 UTC] PHP Fatal error:  Call to undefined method CI_Loader::load() in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 1087
+[21-Nov-2017 17:52:04 UTC] PHP Fatal error:  Can't use function return value in write context in /home/sysmtech/public_html/hblbank/application/views/admin/transaction.php on line 110
+[21-Nov-2017 17:57:16 UTC] PHP Fatal error:  Second array member is not a valid method in /home/sysmtech/public_html/hblbank/application/views/admin/transaction.php on line 112
+[21-Nov-2017 18:32:05 UTC] PHP Parse error:  syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/sysmtech/public_html/hblbank/application/views/admin/contact_info.php on line 114
+[27-Nov-2017 07:37:00 UTC] PHP Parse error:  syntax error, unexpected 'exit' (T_EXIT), expecting ',' or ';' in /home/sysmtech/public_html/hblbank/application/controllers/Register.php on line 175
+[30-Nov-2017 02:47:36 UTC] PHP Parse error:  syntax error, unexpected '$Individual' (T_VARIABLE), expecting '{' in /home/sysmtech/public_html/hblbank/application/controllers/Register.php on line 4
+[04-Dec-2017 13:42:46 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/sysmtech/public_html/hblbank/application/views/summary.php on line 86
+[04-Dec-2017 17:17:40 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/summary.php on line 208
+[05-Dec-2017 20:33:13 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/sysmtech/public_html/hblbank/application/controllers/Register.php on line 281
+[05-Dec-2017 20:33:35 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/sysmtech/public_html/hblbank/application/controllers/Register.php on line 280
+[05-Dec-2017 22:08:55 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE), expecting ',' or ';' in /home/sysmtech/public_html/hblbank/application/views/summary.php on line 194
+[06-Dec-2017 06:47:12 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/dashboard.php on line 322
+[06-Dec-2017 06:47:38 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/dashboard.php on line 322
+[06-Dec-2017 07:03:12 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/dashboard.php on line 334
+[06-Dec-2017 08:22:03 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/dashboard.php on line 346
+[09-Dec-2017 09:35:38 UTC] PHP Fatal error:  Call to a member function count_all() on a non-object in /home/sysmtech/public_html/hblbank/application/controllers/Customer.php on line 907
+[10-Dec-2017 09:09:15 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/confirm_forgot.php on line 221
+[10-Dec-2017 09:09:50 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/confirm_forgot.php on line 221
+[10-Dec-2017 09:09:51 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/confirm_forgot.php on line 221
+[10-Dec-2017 09:10:15 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/confirm_forgot.php on line 221
+[10-Dec-2017 09:13:21 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/confirm_forgot.php on line 221
+[10-Dec-2017 09:16:45 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/confirm_forgot.php on line 221
+[10-Dec-2017 09:18:29 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/confirm_forgot.php on line 221
+[10-Dec-2017 09:19:27 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/sysmtech/public_html/hblbank/application/controllers/Customer.php on line 1497
+[10-Dec-2017 09:19:51 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/confirm_forgot.php on line 221
+[10-Dec-2017 09:20:47 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/confirm_forgot.php on line 221
+[10-Dec-2017 09:21:04 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/confirm_forgot.php on line 221
+[10-Dec-2017 09:21:18 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/confirm_forgot.php on line 221
+[10-Dec-2017 09:21:58 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/sysmtech/public_html/hblbank/application/views/confirm_forgot.php on line 221
+[10-Dec-2017 09:56:28 UTC] PHP Parse error:  syntax error, unexpected '%' in /home/sysmtech/public_html/hblbank/application/models/Department_model.php on line 15
+[10-Dec-2017 09:56:52 UTC] PHP Parse error:  syntax error, unexpected '%' in /home/sysmtech/public_html/hblbank/application/models/Department_model.php on line 15
+[10-Dec-2017 09:58:32 UTC] PHP Parse error:  syntax error, unexpected 'ActivityDate' (T_STRING) in /home/sysmtech/public_html/hblbank/application/models/Department_model.php on line 15
+[02-Jan-2018 18:27:41 UTC] PHP Parse error:  syntax error, unexpected '<', expecting ']' in /home/sysmtech/public_html/hblbank/application/views/report_proced.php on line 294
+[02-Jan-2018 18:28:47 UTC] PHP Parse error:  syntax error, unexpected '<', expecting ']' in /home/sysmtech/public_html/hblbank/application/views/report_proced.php on line 294
+[02-Jan-2018 19:38:21 UTC] PHP Fatal error:  Call to undefined function mdate() in /home/sysmtech/public_html/hblbank/application/views/report_proced.php on line 9
+[04-Jan-2018 05:54:31 UTC] PHP Parse error:  syntax error, unexpected '$mail' (T_VARIABLE) in /home/sysmtech/public_html/hblbank/application/controllers/Customer.php on line 702
+[07-Jan-2018 06:31:47 UTC] PHP Fatal error:  Call to a member function format() on a non-object in /home/sysmtech/public_html/hblbank/application/controllers/Uploadcsv.php on line 74
+[07-Jan-2018 06:33:07 UTC] PHP Fatal error:  Call to a member function format() on a non-object in /home/sysmtech/public_html/hblbank/application/controllers/Uploadcsv.php on line 75
+[07-Jan-2018 07:31:58 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/sysmtech/public_html/hblbank/application/views/report_proced.php on line 254
+[07-Jan-2018 07:34:41 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/sysmtech/public_html/hblbank/application/views/transaction.php on line 39
+[07-Jan-2018 09:24:40 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/sysmtech/public_html/hblbank/application/views/transaction.php on line 129
+[07-Jan-2018 09:28:44 UTC] PHP Fatal error:  Call to a member function requestTransfer() on a non-object in /home/sysmtech/public_html/hblbank/application/views/transaction.php on line 63
+[07-Jan-2018 11:07:35 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/sysmtech/public_html/hblbank/application/models/Customer_panel.php on line 7
+[07-Jan-2018 16:30:11 Asia/Karachi] PHP Fatal error:  Call to undefined function format_number() in /home/sysmtech/public_html/hblbank/application/views/summary.php on line 170
+[07-Jan-2018 12:08:31 UTC] PHP Fatal error:  Call to undefined method Customer_panel::TransferAllRedemption() in /home/sysmtech/public_html/hblbank/application/controllers/Customer.php on line 630
+[07-Jan-2018 12:30:45 UTC] PHP Parse error:  syntax error, unexpected '$abcde' (T_VARIABLE) in /home/sysmtech/public_html/hblbank/application/controllers/Customer.php on line 485
+[07-Jan-2018 12:30:52 UTC] PHP Parse error:  syntax error, unexpected '$abcde' (T_VARIABLE) in /home/sysmtech/public_html/hblbank/application/controllers/Customer.php on line 485
+[14-Jan-2018 05:37:13 UTC] PHP Fatal error:  Call to undefined function insert_portfolio() in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 877
+[14-Jan-2018 05:38:21 UTC] PHP Fatal error:  Call to a member function result() on a non-object in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 912
+[14-Jan-2018 05:41:12 UTC] PHP Fatal error:  Call to a member function result() on a non-object in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 919
+[14-Jan-2018 05:42:04 UTC] PHP Fatal error:  Call to a member function result() on a non-object in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 919
+[14-Jan-2018 05:50:14 UTC] PHP Fatal error:  Call to a member function result() on a non-object in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 881
+[14-Jan-2018 18:29:42 UTC] PHP Fatal error:  Call to a member function insert_importhistorylog() on a non-object in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 948
+[14-Jan-2018 18:36:07 UTC] PHP Fatal error:  Call to a member function insert_importhistorylog() on a non-object in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 949
+[14-Jan-2018 19:41:57 UTC] PHP Fatal error:  Call to undefined method Admin::insert_investor() in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 907
+[20-Jan-2018 03:09:30 UTC] PHP Fatal error:  Cannot redeclare Welcome_model::insert_investoraccountinfo() in /home/sysmtech/public_html/hblbank/application/models/Welcome_model.php on line 23
+[20-Jan-2018 04:10:07 UTC] PHP Fatal error:  require_once(): Failed opening required 'lib/PHPExcel/PHPExcel.php' (include_path='.:/opt/cpanel/ea-php55/root/usr/share/pear') in /home/sysmtech/public_html/hblbank/application/controllers/Uploadcsv.php on line 385
+[20-Jan-2018 04:14:03 UTC] PHP Fatal error:  Class 'PHPExcel_IOFactory' not found in /home/sysmtech/public_html/hblbank/application/controllers/Uploadcsv.php on line 386
+[20-Jan-2018 04:51:14 UTC] PHP Fatal error:  Call to undefined function isempty() in /home/sysmtech/public_html/hblbank/application/controllers/Uploadcsv.php on line 397
+[20-Jan-2018 04:51:54 UTC] PHP Fatal error:  Call to undefined function isempty() in /home/sysmtech/public_html/hblbank/application/controllers/Uploadcsv.php on line 397
+[20-Jan-2018 04:52:07 UTC] PHP Fatal error:  Call to undefined function isempty() in /home/sysmtech/public_html/hblbank/application/controllers/Uploadcsv.php on line 397
+[20-Jan-2018 04:52:34 UTC] PHP Fatal error:  Call to undefined function isempty() in /home/sysmtech/public_html/hblbank/application/controllers/Uploadcsv.php on line 397
+[20-Jan-2018 06:58:47 UTC] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 973
+[21-Jan-2018 04:09:47 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/sysmtech/public_html/hblbank/application/controllers/Admin.php on line 1007

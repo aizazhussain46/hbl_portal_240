@@ -1,0 +1,40 @@
+.header{
+    margin-left: 4%;
+}
+.logo{
+    height: 100px;
+}
+
+p{
+    font-size: 1em;
+}
+.date{
+    text-align: right;
+    margin-right: 5%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 98%;}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+th{
+    background-color: darkgray;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.para{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+

@@ -1,0 +1,351 @@
+<?php 
+
+
+include "elements/header.php";
+
+?>
+      
+        <!---->
+    <img src="<?php echo base_url();?>images/etransaction.jpg" style="width: 100%">
+
+    <div class="container" style="margin-top: 50px">
+        
+        <div class="col-md-4">
+            <DIV class="header-box">
+                Transaction Type
+            </DIV> 
+    <form method="post" action="<?php echo base_url().'Customer/etransfer' ?>">
+
+
+        <script type="text/javascript">
+            function show(str){
+                document.getElementById('sh2').style.display = 'none';
+                document.getElementById('sh1').style.display = 'block';
+                document.getElementById('sh3').style.display = 'none';
+                document.getElementById('third').style.display = 'none';
+                document.getElementById('start-two').style.display = 'block';
+
+            }
+            function show2(sign){
+                document.getElementById('sh2').style.display = 'block';
+                document.getElementById('sh1').style.display = 'none';
+                document.getElementById('sh3').style.display = 'none';
+                document.getElementById('third').style.display = 'none';
+                document.getElementById('start-two').style.display = 'block';
+
+
+
+            }
+            function show3(sign){
+                document.getElementById('sh2').style.display = 'none';
+                document.getElementById('sh1').style.display = 'none';
+                document.getElementById('start-two').style.display = 'none';
+                document.getElementById('sh3').style.display = 'block';
+                document.getElementById('third').style.display = 'block';
+
+            }            
+        </script>
+
+
+            <DIV class="body" style=" font-weight: 300; color: gray;font-size: 15px ">
+            <input type="radio" name="r1" value="R" checked="" id="e1" onchange="show2()" required="" />&nbsp;Redemption&nbsp;
+
+            <input type="radio"  name="r1" value="T" onchange="show(this.value)" required="" />&nbsp;Conversion
+
+            <input type="radio"  name="r1" value="I" onchange="show3(this.value)" required="" />&nbsp;Investment
+
+    
+        <div id='show-me' style='display:none'>Hello</div>
+            <hr>
+            <h4>FOLIO NUMBER</h4>
+                <input type="text" name="folio" value="<?php echo $foliodata;?>" readonly style="border: 2px solid #dedede;padding-left: 10px;padding-top: 8px;padding-bottom: 8px;margin-top: 7px;" > 
+                <hr>
+           
+
+
+
+
+
+
+
+
+        <!-- Redemption -->
+
+        <div id="sh1" style="display: none;">
+            <h6>To Fund</h6>
+                <select style="width: 100%;padding: 6px;border: 2px solid #dedede;margin-top: 6px;" name="conTo" >
+                    <option style="display: none;" value="">Select Fund</option>
+                <?php
+                  $this->db->where('Foli_No',$foliodata);
+
+                  $this->db->from('dailyportfoliosummary');
+                  $query = $this->db->get();
+                  foreach($query->result() as $investment){
+                    $fcode= $investment->Fund_Code;
+                    $this->db->select('*');
+                    $this->db->where('Fund_Code',$fcode);
+                    $result = $this->db->get('fundnames')->result_array();        
+                    $fname= $result[0]['Fund_Name'];
+
+                    $fundName= explode('(', $fname);
+
+                    ?>
+
+                    <option value="<?php echo $result[0]['Fund_Code'];?>"><?php   echo $fundName[0];?></option>
+                    <?php } ?>
+                </select>
+
+                <hr>
+                <h6>From Fund</h6>
+                <select style="width: 100%;padding: 6px;border: 2px solid #dedede;margin-top: 6px;" name="conFrom" >
+                    <option style="display: none;" value="">Select Fund</option>
+                    <?php             
+                      $this->db->from('fundnames');
+                      $query = $this->db->get();
+                      foreach($query->result() as $aa){
+                    ?>
+                    <option value="<?php  echo $aa->Fund_Code; ?>"><?php  echo $aa->Fund_Name; ?></option>
+                    <?php   }  ?>
+                </select>
+
+
+
+
+        </div>
+        
+
+
+
+        <!-- Conversion -->
+
+        <div id="sh2" style="">
+             <h6>From Fund</h6>
+                <select style="width: 100%;padding: 6px;border: 2px solid #dedede;margin-top: 6px;" name="redFROM" >
+                    <option style="display: none;" value=""> Select Fund</option>
+<?php
+                  $this->db->where('Foli_No',$foliodata);
+
+                  $this->db->from('dailyportfoliosummary');
+                  $query = $this->db->get();
+                  foreach($query->result() as $investment){
+                    $fcode= $investment->Fund_Code;
+                    $this->db->select('*');
+                    $this->db->where('Fund_Code',$fcode);
+                    $result = $this->db->get('fundnames')->result_array();        
+                    $fname= $result[0]['Fund_Name'];
+
+                    $fundName= explode('(', $fname);
+
+?>
+
+                    <option value="<?php echo $result[0]['Fund_Code'];?>"><?php echo $fundName[0];?></option>
+                    <?php } ?>
+                </select>
+
+                <hr>
+
+        </div>
+        <div id="sh3" style="display: none;">
+
+                <h6>Fund Name</h6>
+                <select style="width: 100%;padding: 6px;border: 2px solid #dedede;margin-top: 6px;" name="funName" >
+                    <option style="display: none;" value=""> Select Fund</option>
+                      <?php
+                          $this->db->from('fundnames');
+                          $queryfundinv = $this->db->get();
+                          foreach($queryfundinv->result() as $queryfundinvs){
+                       ?>
+                    <option value="<?php echo $queryfundinvs->Fund_Code;?>"><?php echo $queryfundinvs->Fund_Name;?></option>
+
+                 <?php  }    ?>
+                </select>
+
+                <h6 style="margin-top: 20px">Payment Mode</h6>
+                <select style="width: 100%;padding: 6px;border: 2px solid #dedede;margin-top: 6px;" name="selpayment" >
+                    <option style="display: none;" value=""> Select Payment</option>
+                    <option value="Cheque">Cheque</option>
+                </select>
+
+                <h6 style="margin-top: 20px">Amount</h6>
+                <input type="number" class="form-control" name="tamount">
+
+        </div>
+            </DIV>          
+        </div>
+
+        <div class="col-md-4">
+            <DIV class="header-box">
+                Transaction Details
+            </DIV>
+
+
+    <DIV class="body" style="height: 370px;">
+    
+        <div>
+
+        <div id="third" style="display: none;">
+            <label>Bank Name</label>
+            <input type="text" name="bname" class="form-control" pattern="[a-zA-Z\s]+">
+            <label>Bank Account Number</label>
+            <input type="number" name="ban" class="form-control">
+            <label>Cheque/ Intrument Number</label>
+            <input type="number" name="cinum" class="form-control">
+
+        </div>
+
+        <div id="start-two">
+
+                <div class="col-md-1">
+                    <input type="radio" name="selectopt" checked="" required="" value="Amount">
+                </div>                  
+                <div class="col-md-3" style=" font-size: 14px; ">
+                    Amount
+                </div>              
+                <div class="col-md-8" style=" width: 63%; float: left; ">
+                    <input type="number" min="1000" name="amount" style=" border: 2px solid #dedede; "  min="1000" >
+                </div>   <br></br>          
+                <div class="col-md-1">
+                    <input type="radio" name="selectopt" value="All Units" required="">
+                </div>                  
+                <div class="col-md-4" style=" font-size: 14px;padding-left: 14px; ">
+                    All Units
+                </div>  
+
+        </div>
+
+                <div class="col-md-7" style=" ">
+                </div>  
+                <div class="col-md-12" style=" padding: 12px 11px 10px 17px; background: #efefef; color: #069198; font-size: 15px; margin-top: 16px; ">
+                    <p>Minimum transaction value Rs. 1000.</p>
+
+                </div>  
+
+
+
+
+
+
+
+                <br>
+                <br>                <br>
+                <br>
+                <div class="col-md-12">
+                <input type="submit" name="" class="btn-primary btn" style=" margin-top: 24px; width: 40%; background: #069198; " value="Process"  onclick='linkopen(event);'>
+                <input type="reset" name="" class="btn-primary btn" style=" margin-top: 24px; width: 40%; background: #707271; " value="Reset">
+                    
+                </div>
+            </DIV>          
+        </div>
+</form>
+
+        </div>
+
+
+
+        <div class="col-md-4">
+            <DIV class="header-box">
+                <center style=" font-size: 20px; ">Fund Wise Investment</center>
+            </DIV>
+            <DIV class="header-box" style=" background: #707271;font-size: 14px; ">
+                <div class="col-md-8" style=" margin-top: -10px; ">
+                    FUNDS
+                </div>
+                <div class="col-md-4" style=" margin-top: -10px; ">
+                    Ammount
+                </div>                
+            </DIV>
+        <div class="table-responsvie" style=" height: 247px; overflow: auto;    width: 100%;max-height: 225px; ">           
+            <table class="table table-striped bordered ">
+                <?php
+                  $this->db->where('Foli_No',$foliodata);
+
+                  $this->db->from('dailyportfoliosummary');
+                  $query = $this->db->get();
+                  foreach($query->result() as $investment){
+                    $fcode= $investment->Fund_Code;
+                    $this->db->select('*');
+                    $this->db->where('Fund_Code',$fcode);
+                    $result = $this->db->get('fundnames')->result_array();        
+                    $fname= $result[0]['Fund_Name'];
+
+                    $fundName= explode('(', $fname);
+
+                ?>
+                <tr>
+                        <td style=" width: 68%;padding-left: 35px !important;    color: #069198; ">
+                            <?php echo $fundName[0];?>
+                        </td>
+                        <td  style="color: #069198; "><?php echo number_format($investment->Amount1, 2, '.', ',');?></td>
+                </tr>
+                <?php } ?>                   
+            </table>
+        </div>
+            <DIV class="header-box" style=" background: #707271;    height: 70px; ">
+                <div class="col-md-8" style=" margin-top: -10px; ">
+                    <p style="font-size: 14px">Total Investment value (Rs.)<p>
+                    <p style="font-size: 12px">As on June 19, 2017</p>
+                </div>
+                <div class="col-md-4" style="margin-top: 5px;font-size: 16px;">
+                    <?php
+                    $this->db->select_sum('Amount1');
+                    $this->db->where('Foli_No',$foliodata);
+                    $abc = $this->db->get('dailyportfoliosummary')->result_array();    
+                    $sum_value= array_sum($abc[0]);
+
+                    echo number_format($sum_value, 2, '.', ',')
+
+                    ?>
+
+
+                </div>                
+            </DIV>
+        </div>
+
+        <br><br>
+        
+        </div>              
+    </div>
+<?php 
+include "elements/footer.php";
+
+?>
+
+<style type="text/css">
+    .header-box{
+    background: #069198;
+    color: #fff;
+    padding: 20px;
+    }
+    .body {
+    background: #fff;
+    padding: 20px;    padding-bottom: 50px !important;
+    }
+    .body .col-md-6 {
+    margin-bottom: 20px !important;
+}
+.body{
+    height: 100%;
+    margin-bottom: 35px;
+    min-height: 278px;
+
+}html, body {
+    font-family: 'Montserrat-Regular';
+    font-size: 100%;
+    background: #F3F3F4;
+    overflow-x: initial;
+}.col-md-4 {
+    padding: 1px;
+}input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.modal-content {
+    border-radius: 0px !important;
+}
+#third label {
+    font-size: 13px;
+    font-weight: 100;
+    color: grey;
+}
+</style>

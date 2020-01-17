@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'hbl-font';
+  src:  url('fonts/hbl-font.eot?xv9l0w');
+  src:  url('fonts/hbl-font.eot?xv9l0w#iefix') format('embedded-opentype'),
+    url('fonts/hbl-font.ttf?xv9l0w') format('truetype'),
+    url('fonts/hbl-font.woff?xv9l0w') format('woff'),
+    url('fonts/hbl-font.svg?xv9l0w#hbl-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'hbl-font' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-document-file-pdf:before {
+  content: "\e911";
+}
+.icon-calender:before {
+  content: "\e912";
+}
+.icon-edit:before {
+  content: "\e910";
+}
+.icon-mail:before {
+  content: "\e90e";
+}
+.icon-arrow:before {
+  content: "\e90d";
+}
+.icon-agent:before {
+  content: "\e903";
+}
+.icon-home:before {
+  content: "\e904";
+}
+.icon-logout:before {
+  content: "\e905";
+}
+.icon-password:before {
+  content: "\e906";
+}
+.icon-phone:before {
+  content: "\e907";
+}
+.icon-profile:before {
+  content: "\e908";
+}
+.icon-reports:before {
+  content: "\e909";
+}
+.icon-transaction:before {
+  content: "\e90a";
+}
+.icon-www:before {
+  content: "\e90b";
+}
+.icon-twitter-square:before {
+  content: "\e900";
+}
+.icon-printer:before {
+  content: "\e913";
+}
+.icon-print:before {
+  content: "\e913";
+}
+.icon-info:before {
+  content: "\e90f";
+}
+.icon-information:before {
+  content: "\e90f";
+}
+.icon-sphere:before {
+  content: "\e90c";
+}
+.icon-linkedin:before {
+  content: "\e901";
+}
+.icon-brand2:before {
+  content: "\e901";
+}
+.icon-social2:before {
+  content: "\e901";
+}
+.icon-facebook:before {
+  content: "\e902";
+}
+.icon-brand:before {
+  content: "\e902";
+}
+.icon-social:before {
+  content: "\e902";
+}
