@@ -189,7 +189,7 @@ $now = date("Y-m-d");
 
 while($row = mysqli_fetch_assoc($rs_result)) {
 	$folio= $row['folio_no'];
-	if($yesterday == $row['created_date'] && strtotime($row['created_time']) >= strtotime('04:00:00pm')){
+	if($yesterday == $row['created_date'] && strtotime($row['created_time']) >= strtotime($yesterday.' 04:00:00pm')){
 	$filtered[] = $row;			
 	}
 	if($now == $row['created_date'] && strtotime($row['created_time']) <= strtotime('03:59:59pm')){

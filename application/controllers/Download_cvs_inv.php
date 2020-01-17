@@ -70,43 +70,6 @@ $arr = [];
 $exceldata="";
 $cell = 3;
 foreach ($rs->result_array() as $row){
-
-/* for image */	
-// $objDrawing = new PHPExcel_Worksheet_Drawing();    //create object for Worksheet drawing
-
-// $objDrawing->setName($row['file']);        //set name to image
-
-// $objDrawing->setDescription($row['file']); //set description to image
-
-//$gdImage = $_SERVER['DOCUMENT_ROOT'].'/Projects_CodeIgniter/240/investments/'.$row['file'];    //Path to signature .jpg file
-// $objDrawing->setPath($signature);
-
-// $objDrawing->setOffsetX(25);                       //setOffsetX works properly
-// $objDrawing->setOffsetY(10);                       //setOffsetY works properly
-
-// $objDrawing->setCoordinates('K3'.'1');        //set image to cell
-
-// $objDrawing->setWidth(32);                 //set width, height
-// $objDrawing->setHeight(32);  
-                     
-// $objDrawing->setWorksheet($this->excel->getActiveSheet());  //save
-
-// $objDrawing = new PHPExcel_Worksheet_MemoryDrawing();
-// $objDrawing->setName('Sample image');
-// $objDrawing->setDescription('Sample image');
-// $objDrawing->setImageResource($gdImage);
-// $objDrawing->setRenderingFunction(PHPExcel_Worksheet_MemoryDrawing::RENDERING_JPEG);
-// $objDrawing->setMimeType(PHPExcel_Worksheet_MemoryDrawing::MIMETYPE_DEFAULT);
-// $objDrawing->setHeight(150);
-// $objDrawing->setCoordinates('K3');
-// $objDrawing->setWorksheet($this->excel->getActiveSheet());
-
-/* for hyperlink */
-//$this->excel->setActiveSheetIndex(0);
-//$this->excel->getActiveSheet()->setCellValue('K'.++$cell,$row['file']);
-//$this->excel->getActiveSheet()->getCell('K'.$cell)->getHyperlink('K'.$cell)->setUrl('http://examle.com/uploads/cv/'.$row['file']);
-
-
 	//echo $fund[1];
 	   $d = new DateTime($row['created_date']);
        $nd = $d->format('m-d-Y');
@@ -121,9 +84,6 @@ foreach ($rs->result_array() as $row){
 			"transaction_id" => $row['transaction_id'],
 			"status" => $row['status'],
 			"agreed" => $row['agreed'],
-			//"file" => $this->excel->getActiveSheet()->getCellByColumnAndRow('K',++$cell)->getHyperlink()->setUrl('http://www.'),
-			//"file" => $this->excel->getCell('K'.$cell++)->getHyperlink()->setUrl('http://examle.com/uploads/cv/'.$row['file']),	
-			//"file" => $this->excel->getActiveSheet()->getCell('K'.$cell)->getHyperlink('K'.$cell)->setUrl('http://examle.com/uploads/cv/'.$row['file']),
 			"file" => base_url().'investments/'.$row['file'],
 			"comments" => $row['comments'],
 			"created_date" => $nd,
@@ -134,7 +94,7 @@ foreach ($rs->result_array() as $row){
 
 $now = date("Y-m-d");
 foreach ($arr as $rows) {
-	if($yesterday == $rows['created_date'] && $row['created_time'] >= '04:00:00pm'){
+	if($yesterday == $rows['created_date'] && strtotime($row['created_time']) >= strtotime($yesterday.' 04:00:00pm')){	
 	$exceldata[] = $rows;			
 	}
 	if($now == $row['created_date'] && strtotime($row['created_time']) <= strtotime('03:59:59pm')){
